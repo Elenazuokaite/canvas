@@ -1,9 +1,8 @@
 
 var canvas = document.querySelector('canvas');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 var c = canvas.getContext('2d');
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 
 // c.fillStyle = 'rgba(225, 0, 0, 0.5)';
 // c.fillRect(100, 100, 100, 100);  
@@ -34,6 +33,12 @@ var c = canvas.getContext('2d');
 // }
 // c.strokeStyle = 'rgba(255, 51, 204, 0.5)';
 // c.fillStyle = 'rgba(255, 51, 204, 0.5)';
+
+addEventListener("resize", function() {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    // init();
+});
 
 function Circle(x, y, dx, dy, radius) {
     this.x = x;
